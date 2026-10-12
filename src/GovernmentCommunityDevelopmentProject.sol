@@ -1,25 +1,26 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.30;
 
-error OnlyGovernmentAdminCanPerformThisAction();
-error MustSendETHToFundProjects();
-error ProjectDoesNotExist();
-error ProjectIsNotInProposedState();
-error totalBudgetMustBeGreaterThan0();
-error ProjectMustBeApprovedBeforeAssigningAContractor();
-error InvalidContractorAddress();
-error ProjectIsNotInProgress();
-error NoContractorAssigned();
-error InsufficientTreasuryBalance();
-error PaymentExceedsTotalProjectBudget();
-error ProjectMustBeInProgressToComplete();
-error CannotCancelInProgressOrCompletedProjects();
-error InvalidGovernmentAdminAddress();
-error PaymentTransferFailed();
+contract GovernmentCommunityDevelopmentProject {
 
-contract GovernmentCommunityDevelopmentproject {
+    error OnlyGovernmentAdminCanPerformThisAction();
+    error MustSendETHToFundProjects();
+    error ProjectDoesNotExist();
+    error ProjectIsNotInProposedState();
+    error totalBudgetMustBeGreaterThan0();
+    error ProjectMustBeApprovedBeforeAssigningAContractor();
+    error InvalidContractorAddress();
+    error ProjectIsNotInProgress();
+    error NoContractorAssigned();
+    error InsufficientTreasuryBalance();
+    error PaymentExceedsTotalProjectBudget();
+    error ProjectMustBeInProgressToComplete();
+    error CannotCancelInProgressOrCompletedProjects();
+    error InvalidGovernmentAdminAddress();
+    error PaymentTransferFailed();
+
     // Enum to list the type of Community Development Project.
-    enum ProjectType { Road, Drainage, BoleHole }
+    enum ProjectType { Drainage, Road, BoleHole }
     // Tracks the status of each milestone payment.
     enum ProjectStatus { Proposed, Approved, InProgress, Completed, Cancelled }
     
